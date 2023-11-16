@@ -416,6 +416,10 @@ i.fa-solid.fa-chevron-down:hover +
   display: block !important;
 }
 
+.chevron-hide-list:hover {
+  display: block !important;
+}
+
 
 .time-message {
   align-self: flex-end;
