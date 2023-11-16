@@ -94,7 +94,7 @@
             <!-- Contacts -->
             <div 
             class="contacts">
-            
+
               <!-- Contacts Card -->
               <div class="contacts-card flex" 
               v-for="(contact, index) in contacts" 
@@ -156,15 +156,17 @@
             <!-- /Header Right block -->
 
             <!-- Chat-container -->
-            <div class="chat-container">
-              <div class="message-row send">
+            <div 
+            class="chat-container">
+
+              <div 
+              class="message-row send"
+              v-for="(chat, index) in contacts[indexChat].messages"
+              :key="index">
                 <div class="message-box send">
                   <div class="message-text">
                     <p class="message">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias, nulla quo illo error laboriosam amet omnis odit
-                      quisquam consectetur voluptas nesciunt similique adipisci,
-                      dicta cumque, dignissimos voluptate possimus quia eos.
+                      {{ chat.message }}
                     </p>
                   </div>
 
@@ -184,30 +186,6 @@
                 </div>
               </div>
 
-              <div class="message-row recived">
-                <div class="message-box recived">
-                  <div class="message-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Molestias, nulla quo illo error laboriosam amet omnis odit
-                    quisquam consectetur voluptas nesciunt similique adipisci,
-                    dicta cumque, dignissimos voluptate possimus quia eos.
-                  </div>
-
-                  <div class="message-list">
-                    <div class="chevron">
-                      <i class="fa-solid fa-chevron-down"></i>
-                      <div class="chevron-hide-list right-chevron">
-                        <ul>
-                          <li>Info messaggi</li>
-                          <li>Cancella messaggio</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <p class="time-message">16:13</p>
-                  </div>
-                </div>
-              </div>
             </div>
             <!-- /Chat-container -->
 
