@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzap</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Fonts awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <!-- Main -->
+    <main>
+      <div id="app">
+        <div class="container flex">
+          <!-- Left-block -->
+          <section class="left-block">
+            <!-- Header-left-block -->
+            <header class="header-block flex space-between">
+              <!-- Header-profile -->
+              <div class="header-profile">
+                <img class="avatar" src="img/avatar_io.jpg" alt="" />
+              </div>
+              <!-- /Header-profile -->
+
+              <!-- Header-list -->
+              <div class="header-list">
+                <ul class="list-flex">
+                  <li>
+                    <a href=""><i class="fa-solid fa-circle-notch"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-solid fa-message"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /Header-list -->
+            </header>
+            <!-- /Header-left-block -->
+
+            <!-- Notification -->
+            <div class="notification flex space-between">
+              <!-- Mute -->
+              <div class="mute flex">
+                <a href=""><i class="fa-regular fa-bell-slash"></i></a>
+              </div>
+              <!-- /Mute -->
+
+              <!-- Notification Text -->
+              <div class="notification-text">
+                <h3>Ricevi notifiche di nuovi messaggi</h3>
+                <a href="">Attiva notifiche desktop</a>
+              </div>
+              <!-- /Notification Text -->
+            </div>
+            <!-- /Notification -->
+
+            <!-- Search -->
+            <div class="search-box flex">
+              <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="input-search">
+                <input
+                  type="search"
+                  class="search"
+                  placeholder="Cerca o inizia una nuova chat" />
+              </div>
+            </div>
+            <!-- /Search -->
+
+            <!-- Contacts -->
+            <div class="contacts">
+              <!-- Contacts Card -->
+              <div class="contacts-card flex">
+                <div class="avatar-card">
+                  <img class="avatar" src="img/avatar_1.jpg" alt="" />
+                </div>
+
+                <div class="text-card">
+                  <h3>Michele</h3>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+
+                <div class="time">
+                  <span>16:15</span>
+                </div>
+              </div>
+
+              <!-- <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_2.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Fabio</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>16:05</span>
+              </div>
+
+            </div>
+
+            <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_3.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Samuele</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>16:03</span>
+              </div>
+
+            </div>
+
+            <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_4.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Alessandro B.</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>15:50</span>
+              </div>
+
+            </div>
+
+            <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_5.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Alessandro L.</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>15:45</span>
+              </div>
+
+            </div>
+
+            <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_6.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Claudia</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>15:40</span>
+              </div>
+
+            </div>
+
+            <div class="contacts-card flex">
+
+              <div class="avatar-card">
+                <img class="avatar" src="img/avatar_7.jpg" alt="">
+              </div>
+
+              <div class="text-card">
+                <h3>Federico</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="time">
+                <span>15:22</span>
+              </div>
+
+            </div> -->
+              <!-- /Contacts Card -->
+            </div>
+            <!-- /Contacts -->
+          </section>
+          <!-- /Left-block -->
+
+          <!-- Right-block -->
+          <section class="right-block">
+            <!-- Header Right block -->
+            <header class="header-block border-left flex">
+              <!-- Header Profile -->
+              <div class="header-profile-right">
+                <img class="avatar" src="img/avatar_1.jpg" alt="" />
+              </div>
+              <!-- /Header Profile -->
+
+              <!-- Header profile text -->
+              <div class="header-profile-text">
+                <h3 class="name">Michele</h3>
+                <p class="access">Ultimo accesso oggi alle 16:26</p>
+              </div>
+              <!-- /Header profile text -->
+
+              <!-- Header-list-right -->
+              <div class="header-list right-list">
+                <ul class="list-flex">
+                  <li>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-solid fa-paperclip"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /Header-list-right -->
+            </header>
+            <!-- /Header Right block -->
+
+            <!-- Chat-container -->
+            <div class="chat-container">
+              <div class="message-row send">
+                <div class="message-box send">
+                  <div class="message-text">
+                    <p class="message">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Molestias, nulla quo illo error laboriosam amet omnis odit
+                      quisquam consectetur voluptas nesciunt similique adipisci,
+                      dicta cumque, dignissimos voluptate possimus quia eos.
+                    </p>
+                  </div>
+
+                  <div class="message-list">
+                    <div class="chevron">
+                      <i class="fa-solid fa-chevron-down"></i>
+                      <div class="chevron-hide-list">
+                        <ul>
+                          <li>Info messaggi</li>
+                          <li>Cancella messaggio</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <p class="time-message">16:13</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-row recived">
+                <div class="message-box recived">
+                  <div class="message-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias, nulla quo illo error laboriosam amet omnis odit
+                    quisquam consectetur voluptas nesciunt similique adipisci,
+                    dicta cumque, dignissimos voluptate possimus quia eos.
+                  </div>
+
+                  <div class="message-list">
+                    <div class="chevron">
+                      <i class="fa-solid fa-chevron-down"></i>
+                      <div class="chevron-hide-list right-chevron">
+                        <ul>
+                          <li>Info messaggi</li>
+                          <li>Cancella messaggio</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <p class="time-message">16:13</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Chat-container -->
+
+            <!-- Footer right block -->
+            <footer class="flex">
+              <!-- emoji -->
+              <div class="emoji flex">
+                <a href=""><i class="fa-regular fa-face-smile"></i></a>
+              </div>
+              <!-- /emoji -->
+
+              <!-- footer text -->
+              <div class="text-area-footer">
+                <input type="text" placeholder="Scrivi un messaggio" />
+              </div>
+              <!-- /footer text -->
+
+              <!-- vocals -->
+              <div class="vocals flex">
+                <a href=""><i class="fa-solid fa-microphone"></i></a>
+              </div>
+              <!-- /vocals -->
+            </footer>
+            <!-- /Footer right block -->
+          </section>
+          <!-- /Right-block -->
+        </div>
+      </div>
+    </main>
+    <!-- /Main -->
+
+    <!-- my-script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
