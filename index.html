@@ -99,6 +99,7 @@
               <div class="contacts-card flex" 
               v-for="(contact, index) in contacts" 
               :key="index"
+              @click="showCurChat(contact, index)"
               >
                 <div class="avatar-card">
                   <img class="avatar" :src="`img/avatar${contacts[index].avatar}.jpg`" alt="" />
@@ -162,7 +163,8 @@
               <div 
               class="message-row send"
               v-for="(chat, index) in contacts[indexChat].messages"
-              :key="index">
+              :key="index"
+              >
                 <div class="message-box send">
                   <div class="message-text">
                     <p class="message">

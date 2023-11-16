@@ -171,6 +171,9 @@ createApp({
     };
   },
   methods: {
-    
+    showCurChat: function(array, index) {
+      this.indexChat = index;
+      const lengthMessage = (array.message).length;
+    },
   },
 }).mount("#app");
