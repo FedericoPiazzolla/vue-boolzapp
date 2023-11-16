@@ -92,15 +92,20 @@
             <!-- /Search -->
 
             <!-- Contacts -->
-            <div class="contacts">
+            <div 
+            class="contacts">
+            
               <!-- Contacts Card -->
-              <div class="contacts-card flex">
+              <div class="contacts-card flex" 
+              v-for="(contact, index) in contacts" 
+              :key="index"
+              >
                 <div class="avatar-card">
-                  <img class="avatar" src="img/avatar_1.jpg" alt="" />
+                  <img class="avatar" :src="`img/avatar${contacts[index].avatar}.jpg`" alt="" />
                 </div>
 
                 <div class="text-card">
-                  <h3>Michele</h3>
+                  <h3>{{ contacts[index].name }}</h3>
                   <p>Lorem ipsum dolor sit amet</p>
                 </div>
 
@@ -108,109 +113,8 @@
                   <span>16:15</span>
                 </div>
               </div>
-
-              <!-- <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_2.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Fabio</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>16:05</span>
-              </div>
-
-            </div>
-
-            <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_3.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Samuele</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>16:03</span>
-              </div>
-
-            </div>
-
-            <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_4.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Alessandro B.</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>15:50</span>
-              </div>
-
-            </div>
-
-            <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_5.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Alessandro L.</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>15:45</span>
-              </div>
-
-            </div>
-
-            <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_6.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Claudia</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>15:40</span>
-              </div>
-
-            </div>
-
-            <div class="contacts-card flex">
-
-              <div class="avatar-card">
-                <img class="avatar" src="img/avatar_7.jpg" alt="">
-              </div>
-
-              <div class="text-card">
-                <h3>Federico</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-
-              <div class="time">
-                <span>15:22</span>
-              </div>
-
-            </div> -->
               <!-- /Contacts Card -->
+
             </div>
             <!-- /Contacts -->
           </section>
