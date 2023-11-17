@@ -7,6 +7,7 @@ createApp({
     return {
       indexChat: 0 ,
       userMessage: "" ,
+      userSearch: "" ,
 
       contacts: [
         {
@@ -201,6 +202,21 @@ createApp({
         message: "ok!",
         status: "received",
       });
+    },
+    searchContact: function() {
+  
+      let search = this.userSearch.toLowerCase();
+
+      this.contacts.forEach(element => {
+        
+        if(element.name.toLowerCase().includes(search)) {
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+
+      });
+      
     },
   },
 }).mount("#app");

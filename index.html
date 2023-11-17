@@ -86,7 +86,10 @@
                 <input
                   type="search"
                   class="search"
-                  placeholder="Cerca o inizia una nuova chat" />
+                  placeholder="Cerca o inizia una nuova chat"
+                  v-model="userSearch" 
+                  @keyup="searchContact"
+                  />
               </div>
             </div>
             <!-- /Search -->
@@ -100,6 +103,7 @@
               v-for="(contact, index) in contacts" 
               :key="index"
               @click="showCurChat(contact, index)"
+              v-show="contact.visible"
               >
                 <div class="avatar-card">
                   <img 
