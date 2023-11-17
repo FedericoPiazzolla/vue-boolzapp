@@ -398,6 +398,17 @@ body {
   z-index: 2;
 }
 
+.chevron-hide-list button {
+  border: none;
+  background-color: transparent;
+  width: 150px;
+  padding: .4rem .8rem;
+}
+
+.chevron-hide-list button:hover {
+  background-color: lightgray;
+}
+
 .chevron-hide-list.right-chevron {
   border: 1px solid black;
   background-color: whitesmoke;

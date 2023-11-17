@@ -87,7 +87,7 @@
                   type="search"
                   class="search"
                   placeholder="Cerca o inizia una nuova chat"
-                  v-model="userSearch" 
+                  v-model.trim="userSearch" 
                   @keyup="searchContact"
                   />
               </div>
@@ -191,8 +191,11 @@
                       <i class="fa-solid fa-chevron-down"></i>
                       <div class="chevron-hide-list">
                         <ul>
-                          <li>Info messaggi</li>
-                          <li>Cancella messaggio</li>
+                          <button>Info messaggi</button>
+                          <button 
+                          @click="clearMessage(contacts[indexChat].messages, index)">
+                            Cancella messaggio
+                          </button>
                         </ul>
                       </div>
                     </div>

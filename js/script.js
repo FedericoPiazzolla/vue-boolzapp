@@ -218,5 +218,9 @@ createApp({
       });
       
     },
+    clearMessage(array, index) {
+      array.splice(index, 1);
+    },
+    
   },
 }).mount("#app");
