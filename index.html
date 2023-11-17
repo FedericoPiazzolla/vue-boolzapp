@@ -211,7 +211,14 @@
 
               <!-- footer text -->
               <div class="text-area-footer">
-                <input type="text" placeholder="Scrivi un messaggio" />
+                <label for="chat-input"></label>
+                <input
+                v-model="userMessage"
+                id="chat-input" 
+                type="text" 
+                placeholder="Scrivi un messaggio" 
+                @keyup.enter="sendMessage"
+                />
               </div>
               <!-- /footer text -->
 

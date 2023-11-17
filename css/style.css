@@ -395,6 +395,7 @@ body {
   text-align: center;
   position: absolute;
   display: none;
+  z-index: 2;
 }
 
 .chevron-hide-list.right-chevron {

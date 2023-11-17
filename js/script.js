@@ -1,11 +1,13 @@
 const { createApp } = Vue;
 
-const dt = luxon.dateTime;
+const dt = luxon.DateTime;
 
 createApp({
   data() {
     return {
       indexChat: 0 ,
+      userMessage: "" ,
+
       contacts: [
         {
           name: "Michele",
@@ -180,6 +182,25 @@ createApp({
     dateToHourMin: function(fullDate) {
       const luxonDate = dt.fromFormat(fullDate, "dd/MM/yyyy HH:mm:ss");
       return luxonDate.toFormat("HH:mm");
+    },
+    sendMessage: function() {
+      this.contacts[this.indexChat].messages.push({
+        date: "10/01/2023 14:47:00",
+        message: this.userMessage,
+        status: "sent",
+      });
+      this.userMessage = "";
+
+      setTimeout(() => {
+        this.recivedMessage();
+      }, 1000);
+    },
+    recivedMessage: function() {
+      this.contacts[this.indexChat].messages.push({
+        date: "10/01/2023 14:47:00",
+        message: "ok!",
+        status: "received",
+      });
     },
   },
 }).mount("#app");
