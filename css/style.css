@@ -340,12 +340,12 @@ body {
   height: calc(100% - 120px);
   background-image: url(../img/mine.jpg);
   overflow-y: auto;
-  padding: 2rem 1rem;
+  padding: 2.6rem 1.5rem;
 }
 
 .message-row {
   display: flex;
-  margin-bottom: .7rem;
+  margin-bottom: 2rem;
 }
 
 .message-row.sent {
