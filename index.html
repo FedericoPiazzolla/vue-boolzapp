@@ -102,7 +102,11 @@
               @click="showCurChat(contact, index)"
               >
                 <div class="avatar-card">
-                  <img class="avatar" :src="`img/avatar${contacts[index].avatar}.jpg`" alt="" />
+                  <img 
+                  class="avatar" 
+                  :src="`img/avatar${contact.avatar}.jpg`" 
+                  :alt="`Avatar: ${contact.name}`" 
+                  />
                 </div>
 
                 <div class="text-card">
@@ -127,13 +131,15 @@
             <header class="header-block border-left flex">
               <!-- Header Profile -->
               <div class="header-profile-right">
-                <img class="avatar" src="img/avatar_1.jpg" alt="" />
+                <img class="avatar" 
+                :src="`img/avatar${contacts[indexChat].avatar}.jpg`" 
+                :alt="`Avatar: ${contacts[indexChat].name}`" />
               </div>
               <!-- /Header Profile -->
 
               <!-- Header profile text -->
               <div class="header-profile-text">
-                <h3 class="name">Michele</h3>
+                <h3 class="name">{{ contacts[indexChat].name }}</h3>
                 <p class="access">Ultimo accesso oggi alle 16:26</p>
               </div>
               <!-- /Header profile text -->
@@ -161,11 +167,15 @@
             class="chat-container">
 
               <div 
-              class="message-row send"
+              class="message-row"
+              :class="chat.status"
               v-for="(chat, index) in contacts[indexChat].messages"
-              :key="index"
+              :key="chat.date"
               >
-                <div class="message-box send">
+                <div 
+                class="message-box"
+                :class="chat.status"
+                >
                   <div class="message-text">
                     <p class="message">
                       {{ chat.message }}
@@ -183,7 +193,7 @@
                       </div>
                     </div>
 
-                    <p class="time-message">16:13</p>
+                    <p class="time-message">{{ dateToHourMin(chat.date) }}</p>
                   </div>
                 </div>
               </div>
@@ -218,6 +228,12 @@
       </div>
     </main>
     <!-- /Main -->
+
+    <!-- Luxon -->
+    <script 
+      src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js">
+    </script>
+
 
     <!-- my-script -->
     <script src="js/script.js"></script>

@@ -348,11 +348,11 @@ body {
   margin-bottom: .7rem;
 }
 
-.message-row.send {
+.message-row.sent {
   justify-content: flex-end;
 }
 
-.message-row.recived {
+.message-row.received {
   justify-content: flex-start;
 }
 
@@ -366,11 +366,11 @@ body {
   justify-content: space-between;
 }
 
-.message-box.send {
+.message-box.sent {
   background-color: #d5f9ba;
 }
 
-.message-box.recived {
+.message-box.received {
   background-color: white;
 }
 

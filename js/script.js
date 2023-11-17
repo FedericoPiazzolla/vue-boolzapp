@@ -1,5 +1,7 @@
 const { createApp } = Vue;
 
+const dt = luxon.dateTime;
+
 createApp({
   data() {
     return {
@@ -174,6 +176,10 @@ createApp({
     showCurChat: function(array, index) {
       this.indexChat = index;
       const lengthMessage = (array.message).length;
+    },
+    dateToHourMin: function(fullDate) {
+      const luxonDate = dt.fromFormat(fullDate, "dd/MM/yyyy HH:mm:ss");
+      return luxonDate.toFormat("HH:mm");
     },
   },
 }).mount("#app");
