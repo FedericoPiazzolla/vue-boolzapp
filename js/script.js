@@ -185,20 +185,23 @@ createApp({
       return luxonDate.toFormat("HH:mm");
     },
     sendMessage: function() {
-      this.contacts[this.indexChat].messages.push({
-        date: "10/01/2023 14:47:00",
-        message: this.userMessage,
-        status: "sent",
-      });
-      this.userMessage = "";
+      if(this.userMessage.length > 0) {
+        this.contacts[this.indexChat].messages.push({
+          date: dt.now().toFormat("dd/MM/yyyy HH:mm:ss"),
+          message: this.userMessage,
+          status: "sent",
+        });
+        this.userMessage = "";
 
-      setTimeout(() => {
-        this.recivedMessage();
-      }, 1000);
+        setTimeout(() => {
+          this.recivedMessage();
+        }, 1000);
+      }
+      
     },
     recivedMessage: function() {
       this.contacts[this.indexChat].messages.push({
-        date: "10/01/2023 14:47:00",
+        date: dt.now().toFormat("dd/MM/yyyy HH:mm:ss"),
         message: "ok!",
         status: "received",
       });
