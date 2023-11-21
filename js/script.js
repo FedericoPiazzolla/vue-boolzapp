@@ -224,6 +224,13 @@ createApp({
     clearMessage(array, index) {
       array.splice(index, 1);
     },
-    
+    troncateMessage(message) {
+      if(message.length > 20) {
+        const shortMessage = message.substring(0, 20) + "...";
+        return shortMessage;
+      } else {
+        return message;
+      }
+    },
   },
 }).mount("#app");
