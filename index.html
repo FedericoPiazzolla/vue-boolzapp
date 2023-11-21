@@ -115,11 +115,11 @@
 
                 <div class="text-card">
                   <h3>{{ contacts[index].name }}</h3>
-                  <p>{{ troncateMessage(contact.messages[contact.messages.length - 1].message) }}</p>
+                  <p v-if="contact.messages.length > 0">{{ troncateMessage(contact.messages[contact.messages.length - 1].message) }}</p>
                 </div>
 
                 <div class="time">
-                  <span>16:15</span>
+                  <span v-if="contact.messages.length > 0">{{ dateToHourMin(contact.messages[contact.messages.length - 1].date) }}</span>
                 </div>
               </div>
               <!-- /Contacts Card -->
